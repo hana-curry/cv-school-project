@@ -1,0 +1,31 @@
+@import url("./reset.css");
+@import url("./main.css");
+@import url("./printing.css");
+
+:root {
+    --dark: #2c2c2c;
+    --light: #e6e6e6;
+    --special: #9cd68f;
+    --special-2: #2a7e18;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--dark);
+        --foreground: var(--light);
+        --highlight: var(--special);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: var(--light);
+        --foreground: var(--dark);
+        --highlight: var(--special-2)
+    }
+}
+
+* {
+    color: var(--foreground);
+    background-color: var(--background);
+}
