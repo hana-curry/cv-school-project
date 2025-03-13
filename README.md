@@ -1,4 +1,5 @@
-# Curriculum Vitae (school project)
+<a name="top"></a>
+![Curriculum Vitae](banner.svg)
 
 <br>
 
