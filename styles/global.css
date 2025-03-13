@@ -2,6 +2,21 @@
 @import url("./main.css");
 @import url("./printing.css");
 
+@font-face {
+    font-family: "dm-sans";
+    src: url("../public/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: "domine";
+    src: url("../public/fonts/Domine-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "ubuntu";
+    src: url("../public/fonts/Ubuntu-Regular.ttf");
+}
+
 :root {
     --dark: #2c2c2c;
     --light: #e6e6e6;
@@ -28,4 +43,39 @@
 * {
     color: var(--foreground);
     background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "domine", "Times New Roman", Times, serif;
+}
+
+p, span, .green-title {
+    font-family: "ubuntu", Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+    opacity: 0.8;
+    line-height: 1.25em;
+}
+
+.green-title {
+    color: var(--highlight);
+}
+
+.note {
+    font-family: "dm-sans";
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+a.note:focus,
+a.note:hover {
+    opacity: 1;
+}
+
+a {
+    color: var(--highlight);
 }
