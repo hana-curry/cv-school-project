@@ -22,10 +22,20 @@
     --light: #e6e6e6;
     --special: #9cd68f;
     --special-2: #2a7e18;
+
+    --theme: "dark";
+    --background: var(--dark);
+    --foreground: var(--light);
+    --highlight: var(--special);
+
+    --font-xl: 1.5rem;
+    --font-lg: 1rem;
+    --font-normal: 0.8rem;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --theme: "dark";
         --background: var(--dark);
         --foreground: var(--light);
         --highlight: var(--special);
@@ -34,6 +44,7 @@
 
 @media (prefers-color-scheme: light) {
     :root {
+        --theme: "light";
         --background: var(--light);
         --foreground: var(--dark);
         --highlight: var(--special-2)
@@ -54,24 +65,37 @@ h1, h2, h3, h4, h5, h6 {
 
 p, span, .green-title {
     font-family: "ubuntu", Arial, Helvetica, sans-serif;
-    font-size: 1.25rem;
+}
+
+p,
+p, span,
+.note {
+    font-size: var(--font-normal);
 }
 
 p {
-    font-size: 1rem;
     opacity: 0.8;
     line-height: 1.25em;
 }
 
 .green-title {
     color: var(--highlight);
+    font-size: var(--font-lg);
 }
 
 .note {
     font-family: "dm-sans";
     font-style: italic;
     opacity: 0.8;
-    font-size: 1rem;
+}
+
+a {
+    color: var(--highlight);
+}
+
+a:focus,
+a:hover {
+    color: color-mix(in hexa, var(--highlight), color percentage)
 }
 
 a.note:focus,
@@ -79,6 +103,3 @@ a.note:hover {
     opacity: 1;
 }
 
-a {
-    color: var(--highlight);
-}

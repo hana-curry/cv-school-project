@@ -1,14 +1,26 @@
 body {
     display: flex;
     justify-content: center;
-    background-image: url("../public/images/background-spiral.svg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: url("../public/images/background-spiral.svg");
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-image: url("../public/images/background-spiral-light.svg");
+    }
 }
 
 main {
     padding: 2rem 0;
     width: 80%;
+    max-width: 1080px;
     display: flex;
     flex-direction: column;
     gap: 2.75rem;
@@ -19,7 +31,11 @@ section#projects,
 section#other {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+article {
+    margin-bottom: 1rem;
 }
 
 hr {
@@ -35,29 +51,37 @@ hr {
 --- Floatline Section
 */
 
+span#floatline-span-hello {
+    display: block;
+}
+
 h1#floatline-title {
-    font-size: 2rem;
+    font-size: var(--font-xl);
     margin-bottom: 0.3rem;
 }
 
 h1#floatline-title::after {
     position: absolute;
     content: "~";
-    transform: translate(0.70rem, -0.525rem);
-    font-size: 2.5rem;
+    transform: translate(0.40em, -0.25em);
+    font-size: 1.70em;
     color: var(--highlight);
 }
 
 h2#floatline-subtitle {
-    font-size: 1.25rem;
+    font-size: var(--font-lg);
     margin-bottom: 2rem;
+}
+
+img#contact-profile-picture {
+    display: none;
 }
 
 /*
 --- Education section
 */
 h3.education-subtitle {
-    font-size: 1rem;
+    font-size: var(--font-normal);
 }
 
 span.education-date {
@@ -72,13 +96,13 @@ span.education-date {
 .education-title {
     font-size: 1.25rem;
     font-weight: bold;
-    line-height: 1.5em;
+    line-height: 1.25em;
 }
 
 p.project-paragraph,
 p.education-paragraph {
     padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.20rem;
 }
 
 /*
@@ -134,4 +158,90 @@ ul#contact-ul {
     gap: 1.25rem;
     font-family: "ubuntu", Arial, Helvetica, sans-serif;
     text-align: center;
+}
+
+@media screen and (width >= 720px), print {
+
+    body {background-image: none;}
+
+    .separator-svg {display: none;}
+
+    hr {grid-column: span 2 / span 2;}
+
+    main {
+        gap: 1.5rem 30%;
+        display: grid;
+        grid-template-columns: 1fr 10rem;
+        grid-template-areas:
+        "hr1 hr1"
+        "floatline contacts"
+        "floatline contacts"
+        "education contacts"
+        "education other"
+        "projects other"
+        "projects other"
+        "hr2 hr2";
+    }
+
+    main hr:nth-child(1) {grid-area: hr1;}
+
+    main hr:nth-child(2) {grid-area: hr2;}
+
+    #floatline {grid-area: floatline;}
+
+    #education {grid-area: education;}
+
+    section#contact {
+        grid-area: contacts;
+        padding: 0;
+    }
+
+    ul#contact-ul {
+        padding-top: 1rem;
+        align-items: end;
+        text-align: right;
+        font-size: var(--font-normal);
+        gap: .75rem;
+    }
+
+    #projects {grid-area: projects;}
+
+    #other {
+        grid-area: other;
+        justify-content: space-between;
+    }
+
+    article.other-container {
+        width: 100%;
+        gap: 0;
+    }
+
+    article#skills-container ul.other-ul {
+        display: flex;
+    }
+
+    ul.other-ul {
+        align-items: start;
+        gap: .5rem;
+        font-size: var(--font-normal);
+    }
+
+    h3#contact-main-title {
+        display: none;
+    }
+
+    img#contact-profile-picture {
+        display: block;
+        width: 100%;
+    }
+
+    h2.other-title {
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+
+    h2.other-title::before,
+    h2.other-title::after {
+        content: "";
+    }
 }
