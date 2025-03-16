@@ -15,4 +15,10 @@ export default function firstFeature() {
         }
 
     })
+
+    $("#img-dialog").on("click", (e) => {
+        if (e.target == e.currentTarget) {
+            $("#img-dialog").css("display", "none")
+        }
+    })
 }
