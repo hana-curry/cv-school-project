@@ -9,7 +9,7 @@ const imgTheme = {
     ]
 }
 
-function themeSeparators() {
+export default function themeSeparators() {
     $(document).ready(function () {
         const theme = getComputedStyle(document.documentElement).getPropertyValue('--theme').replace(/"/g, '').trim();
         $(".separator-svg").each((key, el) => {

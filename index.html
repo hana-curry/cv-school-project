@@ -17,7 +17,7 @@
                 <span id="floatline-span-content">Je suis étudiante en informatique, j'adore coder, j'aime apprendre de nouvelles choses chaque jour et j'aimerais créer des programmes afin d’aider les autres. J’aime bien travailler en équipe et je suis bien organisé.</span>
             </p>
         </section>
-        <img class="separator-svg" src="./public/images/spacer-1.svg" alt="horizontal separation line">
+        <img type="button" class="separator-svg" src="./public/images/spacer-1.svg" alt="horizontal separation line">
         <section id="education">
             <h3 class="green-title" id="education-main-title">Étude</h3>
             <article class="education-container">
@@ -100,6 +100,20 @@
         </section>
         <hr>
     </main>
+    <dialog id="img-dialog">
+        <div>
+            <img id="dialog-img" src="./public/images/profile.png" alt="a picture of me">
+            <img id="first-scotch" src="./public/images/scotch-1.svg" aria-hidden="true">
+            <img id="second-scotch" src="./public/images/scotch-2.svg" aria-hidden="true">
+            <span id="dialog-handwriten">c'est moi, Hana</span>
+            <span id="dialog-date">16 mars - 2025</span>
+            <div id="dialog-close-photo">
+                <span>remettre la photo</span>
+                <img src="./public/images/simple-arrow.svg" alt="fleche qui pointe vers la droite">
+                <button id="close-dialog-btn" type="button" aria-details="ferme le menu">x</button>
+            </div>
+        </div>
+    </dialog>
     <script src="./scripts/jquery-3.7.1.min.js"></script>
     <script type="module" src="./scripts/scripts.mjs"></script>
 </body>

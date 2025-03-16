@@ -82,6 +82,16 @@ h2#floatline-subtitle {
 
 img#contact-profile-picture {
     display: none;
+    cursor: pointer;
+    margin: 0;
+    transition: 200ms;
+}
+
+img#contact-profile-picture:hover,
+img#img#contact-profile-picture {
+    position: relative;
+    width: calc(100% + .4rem);
+    margin: -.2rem;
 }
 
 /*
@@ -166,6 +176,100 @@ ul#contact-ul {
     font-family: "ubuntu", Arial, Helvetica, sans-serif;
     text-align: center;
 }
+
+/*
+--- Photo modal
+*/
+
+dialog {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#dialog-img {
+    aspect-ratio: 1/1;
+    width: 360px;
+}
+
+#dialog-handwriten,
+#dialog-close-photo span,
+#dialog-close-photo button {
+    font-family:'shantell-sans', 'Times New Roman', Times, serif;
+}
+
+#dialog-handwriten {
+    position: absolute;
+    bottom: 4rem;
+    transform: rotate(-6deg);
+    font-size: 2.2rem;
+}
+
+#first-scotch,
+#second-scotch {
+    position: absolute;
+}
+
+#first-scotch {
+    top: -2rem;
+    left: -2rem;
+}
+
+#second-scotch {
+    bottom: -2rem;
+    right: -2rem;
+}
+
+#dialog-date {
+    padding-top: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#dialog-close-photo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 0.5rem;
+    top: -.45rem;
+    right: .75rem;
+}
+
+#dialog-close-photo img {
+    transform: translateY(0.5rem);
+}
+
+#dialog-close-photo button {
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    margin-left: -.5rem;
+}
+
+dialog > div {
+    position: relative;
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1.30rem;
+    text-align: end;
+}
+
+dialog > div * {
+    color: var(--dark);
+}
+
+
 
 @media screen and (width >= 720px), print {
 

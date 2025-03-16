@@ -17,6 +17,11 @@
     src: url("../public/fonts/Ubuntu-Regular.ttf");
 }
 
+@font-face {
+    font-family: "shantell-sans";
+    src: url("../public/fonts/ShantellSans-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf");
+}
+
 :root {
     --dark: #2c2c2c;
     --light: #e6e6e6;
