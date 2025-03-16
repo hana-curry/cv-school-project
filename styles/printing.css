@@ -4,9 +4,6 @@
 
     body {
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     
     @page {
@@ -14,8 +11,7 @@
         margin: 0;
     }
 
-    
-    :root {
+    body {
         --theme: "light";
         --background: white;
         --foreground: black;
@@ -28,6 +24,7 @@
         border-radius: 10rem;
         border: 0.25rem solid var(--highlight);
         box-sizing: border-box;
+        opacity: 0.75;
     }
 
     .separator-svg {display: none;}

@@ -1,8 +1,14 @@
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +51,7 @@ hr {
     border-radius: 10rem;
     border: none;
     outline: none;
+    opacity: 0.75;
 }
 
 /*
@@ -169,7 +176,7 @@ ul#contact-ul {
     hr {grid-column: span 2 / span 2;}
 
     main {
-        gap: 1.5rem 30%;
+        gap: 1.5rem 20%;
         display: grid;
         grid-template-columns: 1fr 10rem;
         grid-template-areas:
@@ -188,8 +195,24 @@ ul#contact-ul {
     main hr:nth-child(2) {grid-area: hr2;}
 
     #floatline {grid-area: floatline;}
+    h2#floatline-subtitle {margin-bottom: 1rem;}
 
     #education {grid-area: education;}
+
+    h3.education-subtitle {
+        margin-bottom: 1rem;
+    }
+
+    p.education-paragraph {
+        display: inline;
+    }
+    span.education-date {
+        display: inline;
+    }
+
+    #github-article {
+        margin-bottom: 0;
+    }
 
     section#contact {
         grid-area: contacts;
@@ -204,11 +227,10 @@ ul#contact-ul {
         gap: .75rem;
     }
 
-    #projects {grid-area: projects;}
-
-    #other {
+    section#other {
         grid-area: other;
         justify-content: space-between;
+        padding: 0;
     }
 
     article.other-container {
