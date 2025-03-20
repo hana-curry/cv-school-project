@@ -1,5 +1,5 @@
 import firstFeature from "./first-feature.mjs";
-import { changeTheme, colorPicker } from "./theming.mjs"
+import { changeTheme, colorPicker } from "./theming.mjs";
 import neko from "./plugin/oneko-ie6.js";
 import themes from "./data/themes.mjs";
 
@@ -9,7 +9,7 @@ function main() {
         firstFeature();
     
         // Second feature --- Color picker
-        colorPicker(themes)
+        colorPicker(themes);
 
         // Plugin feature --- a cat following the user's cursor
         neko();
