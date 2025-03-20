@@ -42,3 +42,16 @@ html {
         background-color 250ms,
         color 250ms;
 }
+
+@media print {
+    body {
+        --theme: "light";
+        --background: white;
+        --foreground: black;
+        --hightlight: #0DA0C9;
+    }
+
+    hr {
+        border: .25rem solid var(--highlight);
+    }
+}
