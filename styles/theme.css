@@ -1,0 +1,44 @@
+:root {
+    --blue-dark: #0B1A3B;
+    --blue-light: #F5FCFF;
+    --blue-special-light: #3E8CCC;
+    --blue-special-dark: #8FC2D6;
+    --blue-dark-background: url("../public/images/background-img/spiral-dark-blue.svg");
+    --blue-light-background: url("../public/images/background-img/spiral-light-blue.svg");
+
+
+    --pink-dark: #3B1229;
+    --pink-light: #FFF5FC;
+    --pink-special-light: #F2426E;
+    --pink-special-dark: #D68F96;
+
+    --theme: "dark";
+    --background: var(--blue-dark);
+    --foreground: var(--blue-light);
+    --highlight: var(--blue-special-dark);
+}
+
+body {
+    background-image: var(--blue-dark-background);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --theme: "light";
+        --background: var(--blue-light);
+        --foreground: var(--blue-dark);
+        --highlight: var(--blue-special-light);
+    }
+
+    body {
+        background-image: var(--blue-light-background);
+    }
+}
+
+html {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: 
+        background-color 250ms,
+        color 250ms;
+}

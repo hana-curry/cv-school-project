@@ -9,7 +9,6 @@ export default function firstFeature() {
 
     $(window).on("resize", () => {
         const width = $(window).width()
-        console.log(width)
         if (width < 720) {
             $("#img-dialog").css("display", "none")
         }

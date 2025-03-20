@@ -1,72 +1,8 @@
 @import url("./reset.css");
 @import url("./main.css");
 @import url("./printing.css");
-
-@font-face {
-    font-family: "dm-sans";
-    src: url("../public/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
-}
-
-@font-face {
-    font-family: "domine";
-    src: url("../public/fonts/Domine-VariableFont_wght.ttf");
-}
-
-@font-face {
-    font-family: "ubuntu";
-    src: url("../public/fonts/Ubuntu-Regular.ttf");
-}
-
-@font-face {
-    font-family: "shantell-sans";
-    src: url("../public/fonts/ShantellSans-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf");
-}
-
-:root {
-    --dark: #2c2c2c;
-    --light: #e6e6e6;
-    --special: #9cd68f;
-    --special-2: #2a7e18;
-
-    --theme: "dark";
-    --background: var(--dark);
-    --foreground: var(--light);
-    --highlight: var(--special);
-
-    --font-xl: 2rem;
-    --font-lg: 1.25rem;
-    --font-normal: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --theme: "dark";
-        --background: var(--dark);
-        --foreground: var(--light);
-        --highlight: var(--special);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --theme: "light";
-        --background: var(--light);
-        --foreground: var(--dark);
-        --highlight: var(--special-2)
-    }
-}
-
-body, hr {
-    transition: 250ms;
-}
-
-body, html {
-    background-color: var(--background);
-}
-
-* {
-    color: var(--foreground);
-}
+@import url("./theme.css");
+@import url("./fonts.css");
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "domine", "Times New Roman", Times, serif;

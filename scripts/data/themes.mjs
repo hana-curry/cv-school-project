@@ -1,54 +1,54 @@
 const themes = {
     "dark": {
         "spacers": [
-        "./public/images/spacer-1.svg",
-        "./public/images/spacer-2.svg"
+        "spacer-blue-dark-1.svg",
+        "spacer-blue-dark-2.svg"
         ],
         "colors": {
-            "highlight": "var(--special)",
-            "background": "var(--dark)",
-            "foreground": "var(--light)",
+            "background": "var(--blue-dark)",
+            "foreground": "var(--blue-light)",
+            "highlight": "var(--blue-special-dark)",
         },
-        "bg": "background-spiral.svg"
+        "bg": "spiral-dark-blue.svg"
     },
 
     "light": {
         "spacers": [
-        "./public/images/spacer-1-light.svg",
-        "./public/images/spacer-2-light.svg"
+        "spacer-blue-light-1.svg",
+        "spacer-blue-light-2.svg"
         ],
         "colors": {
-            "highlight": "var(--special-2)",
-            "background": "var(--light)",
-            "foreground": "var(--dark)",
+            "background": "var(--blue-light)",
+            "foreground": "var(--blue-dark)",
+            "highlight": "var(--blue-special-light)",
         },
-        "bg": "background-spiral-light.svg"
+        "bg": "spiral-light-blue.svg"
     },
 
     "pink-light": {
         "spacers": [
-        "./public/images/spacer-1-pink-light.svg",
-        "./public/images/spacer-1-pink-light.svg"
+        "spacer-pink-light-1.svg",
+        "spacer-pink-light-2.svg"
         ],
         "colors": {
-            "highlight": "#F2426E",
-            "background": "#FFF5FC",
-            "foreground": "#3B1229",
+            "background": "var(--pink-light)",
+            "foreground": "var(--pink-dark)",
+            "highlight": "var(--pink-special-light)",
         },
-        "bg": "background-spiral-pink-light.svg"
+        "bg": "spiral-light-pink.svg"
     },
 
     "pink-dark": {
         "spacers": [
-        "./public/images/spacer-1-pink.svg",
-        "./public/images/spacer-1-pink.svg"
+        "spacer-pink-dark-1.svg",
+        "spacer-pink-dark-2.svg"
         ],
         "colors": {
-            "highlight": "#D68F96",
-            "background": "#3B1229",
-            "foreground": "#FFF5FC",
+            "background": "var(--pink-dark)",
+            "foreground": "var(--pink-light)",
+            "highlight": "var(--pink-special-dark)",
         },
-        "bg": "background-spiral-pink-dark.svg"
+        "bg": "spiral-dark-pink.svg"
     }
 }
 

@@ -37,18 +37,6 @@ button.color-picker-btn svg {
     transition: border 250ms;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-image: url("../public/images/background-spiral.svg");
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-image: url("../public/images/background-spiral-light.svg");
-    }
-}
-
 main {
     padding: 2rem 0;
     width: 80%;

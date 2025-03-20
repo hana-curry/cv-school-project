@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "dm-sans";
+    src: url("../public/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: "domine";
+    src: url("../public/fonts/Domine-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "ubuntu";
+    src: url("../public/fonts/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+    font-family: "shantell-sans";
+    src: url("../public/fonts/ShantellSans-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf");
+}
+
+:root {
+    --font-xl: 2rem;
+    --font-lg: 1.25rem;
+    --font-normal: 1rem;
+}
