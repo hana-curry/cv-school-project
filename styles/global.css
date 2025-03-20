@@ -33,9 +33,9 @@
     --foreground: var(--light);
     --highlight: var(--special);
 
-    --font-xl: 1.5rem;
-    --font-lg: 1rem;
-    --font-normal: 0.8rem;
+    --font-xl: 2rem;
+    --font-lg: 1.25rem;
+    --font-normal: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,6 +54,10 @@
         --foreground: var(--dark);
         --highlight: var(--special-2)
     }
+}
+
+body, hr {
+    transition: 250ms;
 }
 
 body, html {

@@ -4,11 +4,37 @@ html {
 
 body {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
+}
+
+header {
+    padding-top: 2rem;
+    bottom: 2rem;
+}
+
+div.color-picker {
+    display: flex;
+    gap: 1.25rem;
+}
+
+button.color-picker-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 1rem;
+}
+
+button.color-picker-btn svg {
+    width: 2rem;
+    height: 2rem;
+    border: 0.1rem solid var(--foreground);
+    border-radius: 100%;
+    box-sizing: border-box;
+    transition: border 250ms;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -102,7 +128,7 @@ h3.education-subtitle {
 }
 
 span.education-date {
-    opacity: 0.5;
+    opacity: 0.75;
     font-size: 0.8rem;
 }
 
@@ -111,7 +137,7 @@ span.education-date {
 */
 .project-title,
 .education-title {
-    font-size: 1.25rem;
+    font-size: calc(var(--font-normal) + 0.1em);
     font-weight: bold;
     line-height: 1.25em;
 }
@@ -273,14 +299,12 @@ dialog > div * {
 
 @media screen and (width >= 720px), print {
 
-    body {background-image: none;}
-
     .separator-svg {display: none;}
 
     hr {grid-column: span 2 / span 2;}
 
     main {
-        gap: 1.5rem 20%;
+        gap: 2.5rem 20%;
         display: grid;
         grid-template-columns: 1fr 10rem;
         grid-template-areas:
@@ -304,7 +328,7 @@ dialog > div * {
     #education {grid-area: education;}
 
     h3.education-subtitle {
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
     }
 
     p.education-paragraph {
@@ -370,4 +394,20 @@ dialog > div * {
     h2.other-title::after {
         content: "";
     }
+
+    p.project-paragraph,
+    p.education-paragraph {
+        padding-top: .25rem;
+    }
+
+    header {
+        position: fixed;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    div.color-picker {
+        flex-direction: column;
+    } 
 }
