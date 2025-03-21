@@ -77,7 +77,6 @@ span#floatline-span-hello {
 }
 
 h1#floatline-title {
-    font-size: var(--font-xl);
     margin-bottom: 0.3rem;
 }
 
@@ -90,7 +89,6 @@ h1#floatline-title::after {
 }
 
 h2#floatline-subtitle {
-    font-size: var(--font-lg);
     margin-bottom: 2rem;
 }
 
@@ -111,9 +109,6 @@ img#img#contact-profile-picture {
 /*
 --- Education section
 */
-h3.education-subtitle {
-    font-size: var(--font-normal);
-}
 
 span.education-date {
     opacity: 0.75;
@@ -161,7 +156,6 @@ ul.other-ul {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    font-family: "ubuntu", Arial, Helvetica, sans-serif;
 }
 
 article#skills-container ul.other-ul {
@@ -187,7 +181,6 @@ ul#contact-ul {
     flex-direction: column;
     justify-content: center;
     gap: 1.25rem;
-    font-family: "ubuntu", Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
@@ -208,15 +201,13 @@ dialog {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+dialog#img-dialog > div {
+    background-color: white;
+}
+
 #dialog-img {
     aspect-ratio: 1/1;
     width: 360px;
-}
-
-#dialog-handwriten,
-#dialog-close-photo span,
-#dialog-close-photo button {
-    font-family:'shantell-sans', 'Times New Roman', Times, serif;
 }
 
 #dialog-handwriten {
@@ -243,7 +234,6 @@ dialog {
 
 #dialog-date {
     padding-top: 3rem;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 #dialog-close-photo {
@@ -339,7 +329,6 @@ dialog > div * {
         padding-top: 1rem;
         align-items: end;
         text-align: right;
-        font-size: var(--font-normal);
         gap: .75rem;
     }
 

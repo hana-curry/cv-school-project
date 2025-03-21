@@ -22,4 +22,48 @@
     --font-xl: 2rem;
     --font-lg: 1.25rem;
     --font-normal: 1rem;
+
+    --font-domine: "domine", "Times New Roman", Times, serif;
+    --font-ubuntu: "ubuntu", Arial, Helvetica, sans-serif;
+    --font-dm-sans: "dm-sans", Arial Helvetica sans-serif;
+    --font-shantell-sans: 'shantell-sans', 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-domine);
+}
+
+p, span, li, .green-title {
+    font-family: var(--font-ubuntu);
+}
+
+.note {
+    font-family: var(--font-dm-sans);
+}
+
+#dialog-date {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#dialog-handwriten,
+#dialog-close-photo span,
+#dialog-close-photo button {
+    font-family: var(--font-shantell-sans);
+}
+
+p,
+span,
+.note,
+li,
+h3.education-subtitle {
+    font-size: var(--font-normal);
+}
+
+h2#floatline-subtitle {
+    font-size: var(--font-lg);
+}
+
+h1#floatline-title {
+    font-size: var(--font-xl);
 }
