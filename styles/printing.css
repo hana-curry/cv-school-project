@@ -1,5 +1,9 @@
 @media print {
 
+    dialog {
+        display: none;
+    }
+
     header {display: none;}
 
     html, body {height: 100%;}

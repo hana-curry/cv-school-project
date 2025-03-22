@@ -38,7 +38,7 @@ a::before {
     transition: 100ms;
 }
 
-a:focus,
+a:focus-visible,
 a:hover {
     opacity: 1;
 }
@@ -49,9 +49,12 @@ a:hover::before {
     width: 100%;
 }
 
-*:focus {
+*:focus-visible {
     outline: none;
     outline: 0.1rem solid var(--highlight);
     outline-offset: .25rem;
 }
 
+button, a {
+    cursor: pointer;
+}

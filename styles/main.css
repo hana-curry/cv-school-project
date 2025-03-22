@@ -13,8 +13,8 @@ body {
 }
 
 header {
-    padding-top: 2rem;
-    bottom: 2rem;
+    padding: 2rem 0;
+    height: fit-content;
 }
 
 div.color-picker {
@@ -25,16 +25,26 @@ div.color-picker {
 button.color-picker-btn {
     background-color: transparent;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    padding: .35rem;
+    font-size: 0;
 }
 
 button.color-picker-btn svg {
     width: 2rem;
     height: 2rem;
-    border: 0.1rem solid var(--foreground);
+    outline: 0.2rem solid var(--highlight);
     border-radius: 100%;
     box-sizing: border-box;
     transition: border 250ms;
+}
+
+button.color-picker-btn:focus-visible svg,
+button.color-picker-btn:hover svg {
+    scale: 1.05;
 }
 
 main {
@@ -379,9 +389,15 @@ dialog > div * {
 
     header {
         position: fixed;
-        right: 2rem;
+        right: 0;
+        bottom: 0;
+        padding-right: 2rem;
+        padding-left: 1rem;
+        border-radius: 1rem 0 0 1rem;
         top: 50%;
         transform: translateY(-50%);
+        background-color: var(--foreground);
+        background-color: #97979750;
     }
 
     div.color-picker {
